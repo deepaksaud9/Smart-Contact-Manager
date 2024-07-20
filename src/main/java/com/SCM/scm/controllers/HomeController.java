@@ -17,6 +17,6 @@ public class HomeController {
         model.addAttribute("name", "depp");
         model.addAttribute("subject", "coding");
         System.out.println("home page handler");
-        return "index";
+        return "home";
     }
 }
