@@ -1,0 +1,11 @@
+<div class="parent-fragment" th:fragment="parent(content)">
+    <h1>this is a parent</h1>
+    <p>this is a base class</p>
+<div th:replace="${content}"></div>
+</div>
+
+
+<div th:fragment="test(contents)">
+    <h2>this is a testing fragment</h2>
+    <div th:replace="${contents}"></div>
+</div>

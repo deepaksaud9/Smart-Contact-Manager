@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is a about page</h1>
+
+    <!-- using fragment -->
+    <div class="host-tag" th:replace="${isLogin} ? ~{base :: parent(~{::section.loggenin})} : ~{base :: test(~{::section#not_logged_in})}">
+        <section class="loggenin">
+            <h1>user is logged in</h1>
+            <h2>this is a dynamic content</h2>
+            <hr/>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sit.</p>
+            <p><button>click on the dynamic content</button></p>
+        </section>
+            
+        <section id="not_logged_in">
+            <h1>User is not loggedIn</h1>
+        </section>
+    </div>
+</body>
+</html>
